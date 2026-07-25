@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">JurisFTP</string>
+    <string name="title_activity_main">JurisFTP</string>
+    <string name="package_name">com.jurisftp.fpt</string>
+    <string name="custom_url_scheme">com.jurisftp.fpt</string>
+</resources>

@@ -1,0 +1,8 @@
+{
+  "appId": "com.jurisftp.fpt",
+  "appName": "JurisFTP",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https"
+  }
+}

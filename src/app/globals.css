@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0f0a;
+  --foreground: #00ff41;
+  --phosphor-green: #00ff41;
+  --phosphor-green-dim: #39ff14;
+  --panel-bg: #0d120d;
+  --border-color: rgba(0, 255, 65, 0.3);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .phosphor-glow {
+    text-shadow: 0 0 5px var(--phosphor-green), 0 0 10px var(--phosphor-green);
+  }
+
+  .phosphor-glow-strong {
+    text-shadow: 0 0 8px var(--phosphor-green), 0 0 16px var(--phosphor-green), 0 0 24px var(--phosphor-green);
+  }
+
+  .terminal-border {
+    border: 1px solid var(--border-color);
+  }
+
+  .terminal-panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+  }
+
+  .terminal-button {
+    background: transparent;
+    border: 1px solid var(--phosphor-green);
+    color: var(--phosphor-green);
+    text-shadow: 0 0 5px var(--phosphor-green);
+    transition: all 0.2s;
+  }
+
+  .terminal-button:hover {
+    background: rgba(0, 255, 65, 0.1);
+    box-shadow: 0 0 10px var(--phosphor-green), inset 0 0 10px rgba(0, 255, 65, 0.1);
+  }
+
+  .terminal-button:active {
+    background: rgba(0, 255, 65, 0.2);
+  }
+
+  .terminal-button.active {
+    background: rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 15px var(--phosphor-green), inset 0 0 15px rgba(0, 255, 65, 0.2);
+  }
+
+  .terminal-input {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    color: var(--phosphor-green);
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+  }
+
+  .terminal-input:focus {
+    outline: none;
+    border-color: var(--phosphor-green);
+    box-shadow: 0 0 10px var(--phosphor-green), inset 0 0 10px rgba(0, 255, 65, 0.1);
+  }
+
+  .terminal-input::placeholder {
+    color: rgba(0, 255, 65, 0.4);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--panel-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--phosphor-green);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--phosphor-green-dim);
+}
